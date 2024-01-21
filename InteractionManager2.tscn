@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dspstooie6tby"]
+
+[ext_resource type="Script" path="res://InteractionManager2.gd" id="1_ov0y4"]
+[ext_resource type="FontFile" uid="uid://dx3k6gvhn6tbd" path="res://Texture/Symtext.ttf" id="2_ikwui"]
+
+[node name="InteractionManager2" type="Node2D"]
+script = ExtResource("1_ov0y4")
+
+[node name="Label" type="Label" parent="."]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.0
+offset_right = 41.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ikwui")
+text = "[R] TO DRINK"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6i0xghk1x03a"]
+
+[ext_resource type="Texture2D" uid="uid://dk3v1123f1ql2" path="res://Texture/fountain.png" id="1_gm18p"]
+[ext_resource type="PackedScene" uid="uid://bjjndj51wtbho" path="res://interaction/interaction_area/interaction_area.tscn" id="2_1qss8"]
+[ext_resource type="Script" path="res://interaction/interaction_area/interaction_area2.gd" id="3_ahpwx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t32s0"]
+radius = 40.0
+height = 112.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k8l3j"]
+radius = 64.0
+height = 128.0
+
+[node name="Fountain" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gm18p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_t32s0")
+
+[node name="InteractionArea2" parent="." instance=ExtResource("2_1qss8")]
+script = ExtResource("3_ahpwx")
+action_name = "Drink"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_k8l3j")

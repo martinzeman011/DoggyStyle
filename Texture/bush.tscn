@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0rhy2237x16j"]
+
+[ext_resource type="Texture2D" uid="uid://dmmmcfyonqvro" path="res://Texture/Bush.png" id="1_luy2h"]
+[ext_resource type="PackedScene" uid="uid://bjjndj51wtbho" path="res://interaction/interaction_area/interaction_area.tscn" id="2_ikg85"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfh2n"]
+radius = 11.0
+height = 38.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xn50e"]
+radius = 37.0135
+
+[node name="Bush" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5, -6)
+texture = ExtResource("1_luy2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_tfh2n")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_ikg85")]
+action_name = "Pee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_xn50e")

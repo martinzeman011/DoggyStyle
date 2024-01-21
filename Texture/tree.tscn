@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwcp7tbyggt2u"]
+
+[ext_resource type="Texture2D" uid="uid://p4x6tl0nptld" path="res://Texture/Tree.png" id="1_q8gba"]
+[ext_resource type="PackedScene" uid="uid://bjjndj51wtbho" path="res://interaction/interaction_area/interaction_area.tscn" id="2_wg0yl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfh2n"]
+radius = 7.0
+height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xn50e"]
+radius = 34.0
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-56, -131)
+texture = ExtResource("1_q8gba")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+rotation = 3.14159
+shape = SubResource("CapsuleShape2D_tfh2n")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_wg0yl")]
+action_name = "Pee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+visible = false
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_xn50e")

@@ -1,0 +1,5 @@
+[gd_resource type="Resource"]
+resource_name = "ScoreResource"
+
+[resource]
+score = 0
