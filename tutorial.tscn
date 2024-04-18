@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6gco73d8etmj"]
+
+[ext_resource type="Texture2D" uid="uid://ce204j08q0uvq" path="res://Texture/GrassTile.png" id="1_hmcif"]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -10
+offset_left = -256.0
+offset_top = -242.0
+offset_right = 1336.0
+offset_bottom = 694.0
+texture = ExtResource("1_hmcif")
+stretch_mode = 1

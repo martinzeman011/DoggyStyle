@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cc1dybp82kdhr"
+path="res://.godot/imported/sound of peeing in the grass.mp3-838870967dfcc70b58eea8ecded90e75.mp3str"
+
+[deps]
+
+source_file="res://sound of peeing in the grass.mp3"
+dest_files=["res://.godot/imported/sound of peeing in the grass.mp3-838870967dfcc70b58eea8ecded90e75.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

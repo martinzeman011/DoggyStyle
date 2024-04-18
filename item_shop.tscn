@@ -1,0 +1,157 @@
+[gd_scene load_steps=13 format=3 uid="uid://dcqskw2ep7frk"]
+
+[ext_resource type="Texture2D" uid="uid://cwkd3j8flt4a4" path="res://Texture/itshbckgrnd.png" id="1_ki74g"]
+[ext_resource type="Script" path="res://item_shop.gd" id="1_uceip"]
+[ext_resource type="FontFile" uid="uid://dx3k6gvhn6tbd" path="res://Texture/Symtext.ttf" id="2_l8kl7"]
+[ext_resource type="Texture2D" uid="uid://bmtisbyva6vwq" path="res://hoodie-icon.png" id="4_1k5mb"]
+[ext_resource type="Texture2D" uid="uid://bkyfr0snt1wee" path="res://unicorn-icon.png" id="5_anl2d"]
+[ext_resource type="Texture2D" uid="uid://bdl20w8lbddtt" path="res://hoodie-icon-hover.png" id="5_mo7p7"]
+[ext_resource type="Texture2D" uid="uid://bb08rl6e7c3bu" path="res://sunglasses-icon.png" id="6_f0mpi"]
+[ext_resource type="Texture2D" uid="uid://blaf0wj6xmh8m" path="res://unicorn-icon-hover.png" id="7_srgit"]
+[ext_resource type="Texture2D" uid="uid://bi1vtqkgviavv" path="res://sunglasses-icon-hover.png" id="9_5pmew"]
+[ext_resource type="FontFile" uid="uid://bbvng6aev8qdq" path="res://Texture/DePixelKlein.ttf" id="10_lmsxk"]
+
+[sub_resource type="Theme" id="Theme_6s7x8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olute"]
+bg_color = Color(1, 0.870588, 0, 1)
+
+[node name="Item Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uceip")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 184.0
+texture = ExtResource("1_ki74g")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 144.0
+offset_right = 63.0
+offset_bottom = 176.0
+theme = SubResource("Theme_6s7x8")
+theme_override_colors/font_hover_color = Color(1, 0.027451, 0.760784, 1)
+theme_override_fonts/font = ExtResource("2_l8kl7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_olute")
+text = "Back"
+
+[node name="Reset" type="Button" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 144.0
+offset_right = 312.0
+offset_bottom = 176.0
+theme = SubResource("Theme_6s7x8")
+theme_override_colors/font_hover_color = Color(1, 0.027451, 0.760784, 1)
+theme_override_fonts/font = ExtResource("2_l8kl7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_olute")
+text = "Reset"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 56.0
+offset_right = 252.0
+offset_bottom = 120.0
+columns = 3
+
+[node name="Hoodie" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_1k5mb")
+texture_hover = ExtResource("5_mo7p7")
+
+[node name="Unicorn" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_anl2d")
+texture_hover = ExtResource("7_srgit")
+
+[node name="Glasses" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_f0mpi")
+texture_hover = ExtResource("9_5pmew")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 152.0
+offset_right = 232.0
+offset_bottom = 184.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+theme_override_fonts/font = ExtResource("10_lmsxk")
+theme_override_font_sizes/font_size = 9
+text = "Your XP:  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GlassesPrice" type="Label" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 112.0
+offset_right = 248.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+theme_override_fonts/font = ExtResource("10_lmsxk")
+theme_override_font_sizes/font_size = 9
+text = "100,-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UnicornPrice" type="Label" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 112.0
+offset_right = 184.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+theme_override_fonts/font = ExtResource("10_lmsxk")
+theme_override_font_sizes/font_size = 9
+text = "500,-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HoodiePrice" type="Label" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 112.0
+offset_right = 120.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+theme_override_fonts/font = ExtResource("10_lmsxk")
+theme_override_font_sizes/font_size = 9
+text = "1000,-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Error" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 88.0
+offset_top = 24.0
+offset_right = 232.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+theme_override_fonts/font = ExtResource("10_lmsxk")
+theme_override_font_sizes/font_size = 9
+text = "copak?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="GridContainer/Hoodie" to="." method="_on_hoodie_pressed"]
+[connection signal="pressed" from="GridContainer/Unicorn" to="." method="_on_unicorn_pressed"]
+[connection signal="pressed" from="GridContainer/Glasses" to="." method="_on_glasses_pressed"]

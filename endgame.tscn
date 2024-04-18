@@ -74,15 +74,86 @@ script = ExtResource("5_jjsu6")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_top = 32.0
-offset_right = 320.0
-offset_bottom = 72.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 80.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
 theme_override_fonts/font = ExtResource("6_buj7c")
 theme_override_font_sizes/font_size = 9
-text = "The game has ended
-Your score: "
+text = "Your score: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 40.0
+offset_right = 320.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+theme_override_fonts/font = ExtResource("6_buj7c")
+theme_override_font_sizes/font_size = 9
+text = "Opponents score: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exp" type="Label" parent="."]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 320.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+theme_override_fonts/font = ExtResource("6_buj7c")
+theme_override_font_sizes/font_size = 9
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Win" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 24.0
+offset_right = 320.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.027451, 0.760784, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_nqgdd")
+theme_override_font_sizes/font_size = 20
+text = "YOU WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Defeat" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 24.0
+offset_right = 320.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.780392, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.027451, 0.760784, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_nqgdd")
+theme_override_font_sizes/font_size = 20
+text = "DEFEAT!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Draw" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 24.0
+offset_right = 320.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 0.870588, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.027451, 0.760784, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_nqgdd")
+theme_override_font_sizes/font_size = 20
+text = "DRAW!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

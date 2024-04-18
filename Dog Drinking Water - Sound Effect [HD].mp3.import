@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4wlppbc8a5d4"
+path="res://.godot/imported/Dog Drinking Water - Sound Effect [HD].mp3-8ca32d9f7c1d18a7fffeb65984109152.mp3str"
+
+[deps]
+
+source_file="res://Dog Drinking Water - Sound Effect [HD].mp3"
+dest_files=["res://.godot/imported/Dog Drinking Water - Sound Effect [HD].mp3-8ca32d9f7c1d18a7fffeb65984109152.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

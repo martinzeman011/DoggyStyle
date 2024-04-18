@@ -1,10 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://d2m2cvvgp8apk"]
+[gd_scene load_steps=15 format=3 uid="uid://d2m2cvvgp8apk"]
 
 [ext_resource type="Texture2D" uid="uid://c5dg7daax7oy3" path="res://background.png" id="1_a3y42"]
 [ext_resource type="Script" path="res://menu.gd" id="1_wapt5"]
 [ext_resource type="FontFile" uid="uid://dx3k6gvhn6tbd" path="res://Texture/Symtext.ttf" id="1_y8831"]
 [ext_resource type="AudioStream" uid="uid://qg7qx6idjshu" path="res://doggysoundtrack.mp3" id="4_6i2a2"]
 [ext_resource type="Script" path="res://AudioStreamPlayer2D.gd" id="5_oj7hd"]
+[ext_resource type="FontFile" uid="uid://bbvng6aev8qdq" path="res://Texture/DePixelKlein.ttf" id="6_7nmsk"]
+[ext_resource type="Texture2D" uid="uid://bwf8rklgkyn2f" path="res://Texture/cart.png" id="7_kf7tc"]
+[ext_resource type="Texture2D" uid="uid://bfvdqthp4vrfr" path="res://Texture/cart_hover.png" id="8_0u2fc"]
+[ext_resource type="Texture2D" uid="uid://b1tpxhuus67w0" path="res://coathanger.png" id="9_saltw"]
+[ext_resource type="Texture2D" uid="uid://07jl4nvthh3c" path="res://coathanger-hover.png" id="10_e06o2"]
 
 [sub_resource type="Theme" id="Theme_awwae"]
 
@@ -71,6 +76,43 @@ text = "Quit"
 stream = ExtResource("4_6i2a2")
 script = ExtResource("5_oj7hd")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 152.0
+offset_right = 232.0
+offset_bottom = 184.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+theme_override_fonts/font = ExtResource("6_7nmsk")
+theme_override_font_sizes/font_size = 9
+text = "Your XP:  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemShop" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 40.0
+offset_bottom = 32.0
+texture_normal = ExtResource("7_kf7tc")
+texture_hover = ExtResource("8_0u2fc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Inventory" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 32.0
+texture_normal = ExtResource("9_saltw")
+texture_hover = ExtResource("10_e06o2")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="ItemShop" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Inventory" to="." method="_on_inventory_pressed"]

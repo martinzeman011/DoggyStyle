@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl1g6r60g3bf4"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_jtn20"]
+[ext_resource type="FontFile" uid="uid://dx3k6gvhn6tbd" path="res://Texture/Symtext.ttf" id="2_esyu0"]
+
+[sub_resource type="Theme" id="Theme_ofoad"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1lia"]
+bg_color = Color(1, 0.870588, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oodb8"]
+bg_color = Color(1, 0.870588, 0, 1)
+
+[node name="pause_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jtn20")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 48.0
+offset_right = 232.0
+offset_bottom = 152.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ofoad")
+theme_override_colors/font_hover_color = Color(1, 0.027451, 0.760784, 1)
+theme_override_fonts/font = ExtResource("2_esyu0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d1lia")
+text = "Resume"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ofoad")
+theme_override_colors/font_hover_color = Color(1, 0.027451, 0.760784, 1)
+theme_override_fonts/font = ExtResource("2_esyu0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oodb8")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
